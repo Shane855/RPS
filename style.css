@@ -1,0 +1,71 @@
+body {
+background:rgba(88, 88, 88, 0.13);
+}
+
+.style {
+display:flex;
+justify-content:center;
+align-content:center;
+gap:10px;
+}
+.style2 {
+display:flex;
+justify-content:center;
+align-content:center;
+gap:10px;
+font-size:30px;
+font-weight:bold;
+
+}
+button {
+border:2px solid gray;
+border-radius:5px;
+}
+#rock {
+background: #3498db;
+background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+background-image: -o-linear-gradient(top, #3498db, #2980b9);
+background-image: linear-gradient(to bottom, #3498db, #2980b9);
+font-family: Arial;
+color: #ffffff;
+font-size: 21px;
+padding: 10px 20px 10px 20px;
+text-decoration: none;
+}
+#paper {
+background: #3498db;
+background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+background-image: -o-linear-gradient(top, #3498db, #2980b9);
+background-image: linear-gradient(to bottom, #3498db, #2980b9);
+font-family: Arial;
+color: #ffffff;
+font-size: 21px;
+padding: 10px 20px 10px 20px;
+text-decoration: none;
+}
+#scissors {
+background: #3498db;
+background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+background-image: -o-linear-gradient(top, #3498db, #2980b9);
+background-image: linear-gradient(to bottom, #3498db, #2980b9);
+font-family: Arial;
+color: #ffffff;
+font-size: 21px;
+padding: 10px 20px 10px 20px;
+text-decoration: none;
+}
+.result {
+font-size:30px;
+font-weight:bold;
+display:flex;
+text-decoration: underline;
+padding:30px;
+justify-content:center;
+margin-top:70px;
+}
