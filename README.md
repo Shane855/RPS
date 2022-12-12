@@ -1,97 +1,58 @@
 # RPS
-for (let j = 0; j < 200; j++) {
-const container = document.querySelector('#container');
-const div = document.createElement("div");
-div.classList.add("pixel");
-//div.style.cssText = "width: 50px; height: 50px; border: 1px solid blue;";
-container.appendChild(div);
+//Creates a 16x16 Grid
+function createPixels(size) {
+//Selects the div with the class container
+let container = document.querySelector(".container");
+//A loop that multiplies the parametre SIZE with itself
+for (currentPixel = 0; currentPixel < size * size; currentPixel++) {
+//Creates a new div with the class pixel
+let pixel = document.createElement("div");
+pixel.setAttribute("class", "pixel");
+pixel.addEventListener("pointerover", addRgb);
+//Appends pixel to container
+container.appendChild(pixel);
 }
-/*// Selects the container div
-const container = document.querySelector('#container');
-// Creates a new div
-const div = document.createElement('div');
-// Adds div to container
-container.appendChild(div);
-console.log(div)*/
- 
- 
- 
- 
-body {
-display: flex;
-justify-content: center;
-/*align-content:stretch;*/
-height: 100vh;
-box-sizing: border-box;
 }
-#container {
-display: flex;
-flex-wrap: wrap;
-align-content: stretch;
-margin: 10px;
-width: 500px;
-height: 500px;
-border: 1px solid black;
+
+
+// Colors the pixels
+function addRgb(para) {
+para.target.style = 'background-color:#000000';
+para.target.removeEventListener("pointerover", addRgb);
 }
+
+createPixels(25);
+
+//function resetContainer() {
+// let allPixels = document.querySelectorAll(".pixel");
+//allPixels.forEach(pixel => pixel.parentNode.removeChild(pixel));
+//}
+
+h1 {
+text-align: center;
+margin: 20px;
+}
+
+.container {
+width: 65vh;
+height: 65vh;
+margin: 0 auto;
+border-style: solid;
+border-width: 2px;
+display: grid;
+grid-template: repeat(25, 1fr) / repeat(25, 1fr);
+}
+
 .pixel {
-align-items:stretch;
-border: 1px solid blue;
-height: 6rem;
-width: 6rem;
+width: 1fr;
+height: 1fr;
+border-style: solid;
+border-width: 2px;
 }
 
-
-
- 
-
-
- 
-
- 
-
-for (let j = 0; j < 200; j++) {
-const container = document.querySelector('#container');
-const div = document.createElement("div");
-div.classList.add("pixel");
-//div.style.cssText = "width: 50px; height: 50px; border: 1px solid blue;";
-container.appendChild(div);
-}
-/*// Selects the container div
-const container = document.querySelector('#container');
-// Creates a new div
-const div = document.createElement('div');
-// Adds div to container
-container.appendChild(div);
-console.log(div)*/
-
- 
-
- 
-
- 
-
- 
-
-body {
-display: flex;
-justify-content: center;
-/*align-content:stretch;*/
-height: 100vh;
-box-sizing: border-box;
-}
-#container {
-display: flex;
-flex-wrap: wrap;
-align-content: stretch;
-margin: 10px;
-width: 500px;
-height: 500px;
-border: 1px solid black;
-}
-.pixel {
-align-items:stretch;
-border: 1px solid blue;
-height: 6rem;
-width: 6rem;
+.reset-button {
+display: block;
+max-width: 80px;
+margin: 10px auto;
 }
 
